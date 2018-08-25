@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "build:server": "ng build --prod && http-server dist/pwa",
+    "build:prod": "ng build --prod && firebase deploy",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
@@ -12,12 +13,14 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^6.0.3",
+    "@angular/animations": "angular/animations-builds",
+    "@angular/cdk": "angular/cdk-builds",
     "@angular/common": "^6.0.3",
     "@angular/compiler": "^6.0.3",
     "@angular/core": "^6.0.3",
     "@angular/forms": "^6.0.3",
     "@angular/http": "^6.0.3",
+    "@angular/material": "angular/material2-builds",
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/pwa": "0.6.8",
