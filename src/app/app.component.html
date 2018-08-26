@@ -1,6 +1,22 @@
-<div class="section">
-  <div class="container" color="success">
-    <h1 class="title">{{title}}</h1>
-    <h2 class="subtitle">Calculadora de Reconversión</h2>
+<div class="navbar has-background-info">
+<div class="container fluid">
+  <h1 class="title has-text-light">{{title}}</h1>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+
+<div class="footer">
+  <div class="content has-text-centered">
+    <p class="has-text-dark">
+        <span class="icon">
+            <i class="fas fa-cog"></i>
+        </span>
+      <span class="icon has-text-danger">
+          <i class="fas fa-heart"></i>
+      </span>
+      <span class="flag-icon flag-icon-ve"></span> por 
+      <a href="https://twitter.com/jyacot" class="has-text-dark">@jyacot</a>
+    </p>
   </div>
 </div>

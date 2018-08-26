@@ -1,0 +1,51 @@
+<div class="section">
+    <div class="container fluid">
+        <h2 class="subtitle">Calculadora de Reconversión Monetaria para Venezuela</h2>
+    </div>
+    <div class="container fluid">
+      <div class="card">
+        <div class="card-content" id="impresion_calculo">
+          <div class="has-text-centered">
+            Base de Cálculo:
+            <b>{{baseCalculo | montovalido | currency:' '}}</b>
+          </div>
+           <div class="has-text-centered">
+            {{baseCalculo | montovalido | montoFuerte | currency:'BsF: '}}
+          </div>
+          <div class="has-text-centered">
+              {{baseCalculo | montovalido | montoSoberano | currency:'BsS: '}}
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="container flex">
+        <div class="field">
+          <div class="label">Monto: </div>
+          <div class="control has-icons-left has-icons-right">
+            <input type="number" 
+              class="input" 
+              placeholder="Ingrese el monto a calcular" 
+              [(ngModel)]="baseCalculo"
+              name="base_calculo"
+              step="0.001"
+              required
+              >
+            <span class="icon is-small is-left">
+                <i class="fas fa-calculator"></i>
+              </span>
+              <!-- <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+              </span> -->
+          </div>
+        </div>
+        
+        <div class="field is-grouped has-text-centered">
+          <div class="control ">
+            <button class="button is-link">Calcular</button>
+          </div>
+          <div class="control">
+            <button class="button clear" (click)='reset()'>Limpiar</button>
+          </div>
+        </div>
+    </div>
+</div>
