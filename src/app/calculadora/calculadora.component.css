@@ -1,3 +1,9 @@
-#impresion_calculo{
-    font-size: 1.5rem;
+#impresion_calculo {
+  font-size: 1.5rem;
+}
+.currency{
+  font-size: 2rem;
+}
+.base_calculo{
+  font-size: 0.8rem;
 }

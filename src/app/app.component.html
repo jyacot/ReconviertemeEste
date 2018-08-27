@@ -1,22 +1,29 @@
-<div class="navbar has-background-info">
-<div class="container fluid">
-  <h1 class="title has-text-light">{{title}}</h1>
+<div class="splash" id="splashscreen" *ngIf="splash">
+  <div class="spinner">
+    <div class="dot1"></div>
+    <div class="dot2"></div>
   </div>
 </div>
+
+<nav class="level has-background-info" style="height:50px">
+  <div class="level-item has-text-centered">
+    <h1 class="title has-text-light">{{title}}</h1>
+  </div>
+</nav>
 
 <router-outlet></router-outlet>
 
 <div class="footer">
   <div class="content has-text-centered">
-    <p class="has-text-dark">
+      <p class="has-text-dark">
         <span class="icon">
-            <i class="fas fa-cog"></i>
+          <i class="fas fa-cog"></i>
         </span>
-      <span class="icon has-text-danger">
+        <span class="icon has-text-danger">
           <i class="fas fa-heart"></i>
-      </span>
-      <span class="flag-icon flag-icon-ve"></span> por 
-      <a href="https://twitter.com/jyacot" class="has-text-dark">@jyacot</a>
-    </p>
+        </span>
+        <span class="flag-icon flag-icon-ve"></span> por
+        <a href="https://twitter.com/jyacot" class="has-text-dark">@jyacot</a>
+      </p>
   </div>
 </div>

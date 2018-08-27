@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { MontoValidoPipe } from './monto-valido.pipe';
 import { MontoFuertePipe } from './monto-fuerte.pipe';
 import { MontoSoberanoPipe } from './monto-soberano.pipe';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { SoloNumerosDirective } from './directives/solonumeros.directive';
 
 
 const AppRoutes: Routes = [
@@ -23,10 +25,12 @@ const AppRoutes: Routes = [
     CalculadoraComponent,
     MontoValidoPipe,
     MontoFuertePipe,
-    MontoSoberanoPipe
+    MontoSoberanoPipe,
+    SoloNumerosDirective
   ],
   imports: [
     BrowserModule,
+    CurrencyMaskModule,
     FormsModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     RouterModule.forRoot(AppRoutes)

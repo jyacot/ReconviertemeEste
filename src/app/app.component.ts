@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
+import {timer} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,11 @@ import { SwUpdate } from '@angular/service-worker';
 })
 export class AppComponent implements OnInit {
   title = 'Reconvierteme';
+  splash: boolean;
 
-  constructor(private swUpdate: SwUpdate) {}
+  constructor(private swUpdate: SwUpdate) {
+    this.splash = true;
+  }
 
   ngOnInit(): void {
     if (this.swUpdate.isEnabled) {
@@ -18,5 +22,8 @@ export class AppComponent implements OnInit {
         window.location.reload();
       });
     }
+    timer(3000).subscribe(() => {
+      this.splash = false;
+    });
   }
 }
